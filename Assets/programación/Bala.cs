@@ -7,6 +7,7 @@ public class Bala : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float fireRate;
     [SerializeField] float tiempo;
+    [SerializeField] float daño;
 
     Animator animabala;
     Rigidbody2D balacuerpo;
@@ -59,8 +60,15 @@ public class Bala : MonoBehaviour
         string etiqueta = objeto.tag;
 
         Destroy(this.gameObject);
-    }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("enenmigo"))
+        {
+            collision.GetComponent<Torreta>().TomarDaño(daño);
+        }
+    }
 
     bool suelo()
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4493691381495778980}
   - component: {fileID: -1648815709695101188}
   - component: {fileID: -1473477099036787897}
+  - component: {fileID: 9214226174101078337}
   m_Layer: 0
   m_Name: disparo_0 1
   m_TagString: bala
@@ -103,6 +104,7 @@ MonoBehaviour:
   speed: 20
   fireRate: 0
   tiempo: 4
+  "da\xF1o": 1
   megaman: {fileID: 2787354487169731298, guid: e1aa337b54b81414ea4aa8dd1c0fe3ff, type: 3}
 --- !u!50 &390242169320091417
 Rigidbody2D:
@@ -183,3 +185,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &9214226174101078337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077764512820115984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.08, y: 0.06}
+    newSize: {x: 0.08, y: 0.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.08, y: 0.06}
+  m_EdgeRadius: 0

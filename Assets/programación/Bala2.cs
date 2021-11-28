@@ -6,6 +6,8 @@ public class Bala2 : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float fireRate;
+    [SerializeField] public float daño;
+    [SerializeField] public float tiempo;
 
 
     Animator animabala;
@@ -20,6 +22,11 @@ public class Bala2 : MonoBehaviour
         balacolision = GetComponent<BoxCollider2D>();
     }
 
+    void tiempodevida()
+    {
+        Destroy(gameObject, tiempo);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,5 +39,13 @@ public class Bala2 : MonoBehaviour
         string etiqueta = objeto.tag;
 
         Destroy(this.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+            collision.GetComponent<megaman>().TomarDaño(daño);
+        }
     }
 }

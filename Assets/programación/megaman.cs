@@ -11,7 +11,7 @@ public class megaman : MonoBehaviour
     [SerializeField] GameObject Bala;
     [SerializeField] GameObject Bala2;
     [SerializeField] private Transform disparador;
-
+    [SerializeField] public float vida;
     Animator MyAnimator;
     Rigidbody2D myBody;
     BoxCollider2D myCollider;
@@ -43,6 +43,14 @@ public class megaman : MonoBehaviour
         saltodoble();
         caer();
         Disparar();
+    }
+    public void TomarDaño(float daño)
+    {
+        vida -= daño;
+        if (vida <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void Disparar()
